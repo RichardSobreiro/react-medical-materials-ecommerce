@@ -1,0 +1,136 @@
+/** @format */
+.header-section {
+  min-height: 4rem;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.top-contact-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+.tel-container a {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.tel-container a img {
+  vertical-align: center;
+  margin-right: 0.5rem;
+}
+
+.social-container a img {
+  width: 1.7rem;
+  margin: 0 0.3rem;
+}
+
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #2c2c2c;
+}
+
+.navbar {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.navbar-brand span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.navbar-brand img {
+  width: 40px;
+  margin-right: 5px;
+}
+
+.navbar-nav {
+  color: white;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navbar-nav li {
+  padding: 0.5rem 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+
+.navbar-nav li:hover {
+  cursor: pointer;
+}
+
+.navbar-toggler {
+  display: none;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.navbar-toggler img {
+  background-size: 3rem;
+  /* display: inline-block; */
+  display: none;
+  width: 3rem;
+  height: 3rem;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.mobile-menu {
+  color: white;
+  display: none;
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+.mobile-menu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-menu-list li {
+  padding: 0.3rem;
+}
+
+.mobile-menu-list li:hover {
+  cursor: pointer;
+}

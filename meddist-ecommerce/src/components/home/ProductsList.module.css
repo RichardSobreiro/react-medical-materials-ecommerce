@@ -1,0 +1,10 @@
+/** @format */
+
+.products-list-container {
+  margin: 2rem;
+  width: 90vw;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

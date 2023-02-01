@@ -1,0 +1,28 @@
+/** @format */
+
+.product-item-container {
+  border: 1px solid #a6a6a6;
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 0.2rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px,
+    rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px,
+    rgb(0 0 0 / 9%) 0px -3px 5px;
+}
+
+.product-item-container:hover {
+  cursor: pointer;
+  background-color: orange;
+  border: 5px solid #a6a6a6;
+}
+
+.image-container img {
+  max-width: 80%;
+}
+
+.product-description-container h3 {
+  margin: 0.5rem 0;
+}

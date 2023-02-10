@@ -1,5 +1,5 @@
 /** @format */
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import searchIcon from "../../images/search-icon.png";
 import classes from "./SearchProduct.module.css";
@@ -7,18 +7,23 @@ import classes from "./SearchProduct.module.css";
 const SearchProduct = (props) => {
   const [enteredFilter, setEnteredFilter] = useState("");
   const inputRef = useRef("");
-  const { applyProducts, fetchProducts } = props;
+  const { applyProducts, onFetchProducts } = props;
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (inputRef.target && enteredFilter === inputRef.target.value) {
-        fetchProducts({ url: "http://localhost:8000/products" }, applyProducts);
+      if (enteredFilter === inputRef.current.value) {
+        const query =
+          enteredFilter.length === 0 ? "" : `?name_like=${enteredFilter}`;
+        onFetchProducts(
+          { url: `http://localhost:8000/products${query}` },
+          applyProducts
+        );
       }
     }, 600);
     return () => {
       clearTimeout(timer);
     };
-  }, [enteredFilter, inputRef, applyProducts, fetchProducts]);
+  }, [enteredFilter, inputRef, applyProducts, onFetchProducts]);
 
   return (
     <div className={classes["search-container"]}>
@@ -38,4 +43,4 @@ const SearchProduct = (props) => {
   );
 };
 
-export default SearchProduct;
+export default React.memo(SearchProduct);

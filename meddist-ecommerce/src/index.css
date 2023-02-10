@@ -9,6 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   background-color: rgb(103, 187, 255);
+  padding-right: 15px; /* Avoid width reflow */
 }
 
 code {

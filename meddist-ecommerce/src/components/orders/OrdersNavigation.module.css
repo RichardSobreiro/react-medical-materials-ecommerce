@@ -1,0 +1,32 @@
+/** @format */
+.orders-nav-container {
+  margin: 0.5rem 0;
+}
+
+.orders-nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.orders-nav-list li {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navlink {
+  padding: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  background-color: rgb(240, 240, 240);
+  border-radius: 1rem;
+  cursor: default;
+}
+
+.navlink:not(.active):hover {
+  background-color: rgb(0, 0, 0);
+  border-radius: 1rem;
+  color: white;
+}

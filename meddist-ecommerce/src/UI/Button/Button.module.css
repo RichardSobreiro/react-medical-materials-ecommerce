@@ -1,0 +1,65 @@
+/** @format */
+
+.btn {
+  padding: 0.4rem 0.6rem;
+  border: 2px solid;
+  border-radius: 5px;
+  background-color: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 0.3rem;
+  margin-top: 0.3rem;
+}
+
+.btn-small {
+}
+
+.success:not([disabled]) {
+  background-color: rgb(218, 255, 220);
+  border-color: #04aa6d;
+  color: green;
+}
+
+.success:not([disabled]):hover {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.info:not([disabled]) {
+  border-color: #2196f3;
+  color: dodgerblue;
+}
+
+.info:not([disabled]):hover {
+  background: #2196f3;
+  color: white;
+}
+
+.warning:not([disabled]) {
+  border-color: #ff9800;
+  color: orange;
+}
+
+.warning:not([disabled]):hover {
+  background: #ff9800;
+  color: white;
+}
+
+.danger:not([disabled]) {
+  border-color: #f44336;
+  color: red;
+}
+
+.danger:not([disabled]):hover {
+  background: #f44336;
+  color: white;
+}
+
+.default:not([disabled]) {
+  border-color: #b9b9b9;
+  color: #919191;
+}
+
+.default:not([disabled]):hover {
+  background: #e7e7e7;
+}

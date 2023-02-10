@@ -2,6 +2,7 @@
 
 .product-item-container {
   border: 1px solid #a6a6a6;
+  background-color: white;
   padding: 1rem 0;
   display: grid;
   grid-template-columns: 50% 50%;
@@ -13,16 +14,24 @@
     rgb(0 0 0 / 9%) 0px -3px 5px;
 }
 
-.product-item-container:hover {
-  cursor: pointer;
-  background-color: orange;
-  border: 5px solid #a6a6a6;
-}
-
 .image-container img {
   max-width: 80%;
 }
 
+.product-description-container {
+  font-weight: bold;
+}
+
 .product-description-container h3 {
   margin: 0.5rem 0;
+}
+
+.product-description {
+  font-weight: normal;
+  font-size: 0.8rem;
+}
+
+.product-stock-quantity {
+  font-weight: normal;
+  font-size: 1rem;
 }

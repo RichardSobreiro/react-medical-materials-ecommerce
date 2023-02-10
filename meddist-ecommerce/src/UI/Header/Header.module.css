@@ -22,6 +22,7 @@
   display: flex;
   align-items: center;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .tel-container a img {
@@ -47,18 +48,25 @@
   z-index: 100;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .navbar-brand {
   display: flex;
   align-items: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
   cursor: pointer;
+  text-decoration: none;
+  padding: 1rem 0.3rem;
+}
+
+.navbar-brand:hover {
+  cursor: pointer;
+  background-color: rgb(133, 133, 133);
+  border-radius: 1rem;
 }
 
 .navbar-brand span {
@@ -77,17 +85,35 @@
   list-style: none;
   display: flex;
   justify-content: flex-start;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.navbar-nav li {
-  padding: 0.5rem 2rem;
+.navbar-logo-menu-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav-link {
+  text-decoration: none;
+  padding: 1.3rem 1rem;
   text-transform: uppercase;
   text-align: center;
   font-weight: bold;
+  text-decoration: none;
+  color: white;
 }
 
-.navbar-nav li:hover {
+.navbar-nav-link:hover {
   cursor: pointer;
+  background-color: rgb(133, 133, 133);
+  border-radius: 1rem;
+}
+
+.active {
+  background-color: rgb(133, 133, 133);
+  border-radius: 1rem;
+  cursor: default;
 }
 
 .navbar-toggler {
@@ -133,4 +159,46 @@
 
 .mobile-menu-list li:hover {
   cursor: pointer;
+}
+
+.shopping-cart {
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  font-size: inherit;
+  padding: 1rem;
+}
+
+.shopping-cart:hover {
+  cursor: pointer;
+  background-color: rgb(133, 133, 133);
+  border-radius: 1rem;
+}
+
+.shopping-cart span {
+  margin-right: 0.2rem;
+}
+
+.shopping-cart img {
+  max-height: 2rem;
+  -webkit-filter: invert(100%); /* Safari/Chrome */
+  filter: invert(100%);
+}
+
+.modal-order-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.modal-order-price {
+  font-size: 1.2rem;
+  font-weight: bold;
 }

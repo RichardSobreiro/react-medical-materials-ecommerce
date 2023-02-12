@@ -1,6 +1,7 @@
 /** @format */
 import { Suspense } from "react";
 import { json, defer, Await, useRouteLoaderData } from "react-router-dom";
+import config from "../config.json";
 
 import classes from "./ProductDetail.module.css";
 
@@ -26,7 +27,7 @@ const ProductDetail = () => {
 export default ProductDetail;
 
 async function loadProduct(id) {
-  const response = await fetch("http://localhost:8000/products/" + id);
+  const response = await fetch(`${config.SERVER_URL}/products/` + id);
 
   if (!response.ok) {
     throw json(

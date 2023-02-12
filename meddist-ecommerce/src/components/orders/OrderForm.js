@@ -7,6 +7,7 @@ import Button from "../../UI/Button/Button";
 import Loader from "../../UI/Loader/Loader";
 import useHttp from "../../hooks/useHttp";
 import { resetCart } from "../../store/cartSlice";
+import config from "../../config.json";
 
 import classes from "./OrderForm.module.css";
 
@@ -34,7 +35,7 @@ const OrderForm = () => {
     cart.forEach((item) => productsInCart.push(item));
     await createOrder(
       {
-        url: `http://localhost:8000/orders`,
+        url: `${config.SERVER_URL}/orders`,
         method: "POST",
         body: {
           id: Date.now().toString(),

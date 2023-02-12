@@ -1,5 +1,6 @@
 /** @format */
 import React, { useEffect, useRef, useState } from "react";
+import config from "../../config.json";
 
 import searchIcon from "../../images/search-icon.png";
 import classes from "./SearchProduct.module.css";
@@ -15,7 +16,7 @@ const SearchProduct = (props) => {
         const query =
           enteredFilter.length === 0 ? "" : `?name_like=${enteredFilter}`;
         onFetchProducts(
-          { url: `http://localhost:8000/products${query}` },
+          { url: `${config.SERVER_URL}/products${query}` },
           applyProducts
         );
       }

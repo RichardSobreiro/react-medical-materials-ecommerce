@@ -84,13 +84,13 @@ const Header = (props) => {
         <div className={classes.container}>
           <div className={classes["top-contact-container"]}>
             <div className={classes["tel-container"]}>
-              <a href="true">
+              <a href="true" rel="noreferrer">
                 <img src={telephone} alt="Telephone symbol."></img>
                 Call +01 987 654 321
               </a>
             </div>
             <div className={classes["social-container"]}>
-              <a href="true">
+              <a href="true" rel="noreferrer">
                 <img src={facebook} alt="Facebook icon."></img>
                 <img src={twitter} alt="Twitter icon."></img>
                 <img src={instagram} alt="Instagram icon."></img>

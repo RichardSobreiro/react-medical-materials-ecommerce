@@ -115,7 +115,11 @@ const About = () => {
               Personal&nbsp;Profile:&nbsp;
             </span>
             <span>
-              <a href="https://richard.sobreiro.dev" target="_blank">
+              <a
+                href="https://richard.sobreiro.dev"
+                target="_blank"
+                rel="noreferrer"
+              >
                 richard.sobreiro.dev
               </a>
             </span>

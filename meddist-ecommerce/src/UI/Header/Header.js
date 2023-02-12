@@ -71,6 +71,7 @@ const Header = (props) => {
             cart.map((product) => {
               return (
                 <ProductItem
+                  key={product.id}
                   product={product}
                   shouldRenderActions={true}
                 ></ProductItem>

@@ -27,7 +27,7 @@ const ProductDetail = () => {
 export default ProductDetail;
 
 async function loadProduct(id) {
-  const response = await fetch(`${config.SERVER_URL}/products/` + id);
+  const response = await fetch(`${config.SERVER_URL}products/` + id);
 
   if (!response.ok) {
     throw json(

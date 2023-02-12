@@ -16,7 +16,7 @@ const SearchProduct = (props) => {
         const query =
           enteredFilter.length === 0 ? "" : `?name_like=${enteredFilter}`;
         onFetchProducts(
-          { url: `${config.SERVER_URL}/products${query}` },
+          { url: `${config.REACT_APP_SERVER_URL}/products${query}` },
           applyProducts
         );
       }

@@ -30,6 +30,7 @@ const SearchProduct = (props) => {
     <div className={classes["search-container"]}>
       <form className={classes["search-form"]}>
         <input
+          data-testid="search-products"
           ref={inputRef}
           value={enteredFilter}
           onChange={(event) => setEnteredFilter(event.target.value)}

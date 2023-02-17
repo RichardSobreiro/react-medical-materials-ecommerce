@@ -3,14 +3,43 @@
 .container {
   background-color: #cbcbcb;
   border-radius: 10px;
-  display: grid;
-  grid-template-columns: 50% 50%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 80%;
   padding: 1rem;
 }
 
 .order-area {
   padding: 1rem;
+  width: 100%;
+}
+
+@media (min-width: 55rem) {
+  .container {
+    background-color: #cbcbcb;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    width: 80%;
+    padding: 1rem;
+  }
+
+  .order-area {
+    padding: 1rem;
+  }
+
+  .order-area-title {
+    text-align: left;
+  }
+
+  .payment-area {
+    padding: 1rem;
+  }
+
+  .payment-area-title {
+    text-align: right;
+  }
 }
 
 .order-area hr {
@@ -19,15 +48,16 @@
 }
 
 .order-area-title {
-  text-align: left;
+  text-align: center;
 }
 
 .payment-area {
   padding: 1rem;
+  width: 100%;
 }
 
 .payment-area-title {
-  text-align: right;
+  text-align: center;
 }
 
 .payment-area hr {

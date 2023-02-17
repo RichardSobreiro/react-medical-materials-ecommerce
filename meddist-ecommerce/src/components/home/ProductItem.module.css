@@ -5,7 +5,7 @@
   background-color: white;
   padding: 1rem 0;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 100%;
   grid-gap: 0.2rem;
   margin-bottom: 1rem;
   margin-right: 1rem;
@@ -15,7 +15,7 @@
 }
 
 .image-container img {
-  max-width: 80%;
+  max-width: 90%;
 }
 
 .product-description-container {
@@ -34,4 +34,15 @@
 .product-stock-quantity {
   font-weight: normal;
   font-size: 1rem;
+}
+
+@media (min-width: 55rem) {
+  .product-item-container {
+    grid-template-columns: 50% 50%;
+    grid-gap: 0.2rem;
+  }
+
+  .image-container img {
+    max-width: 80%;
+  }
 }

@@ -1,13 +1,15 @@
 /** @format */
 
 .container {
-  max-width: 80vw;
+  max-width: 90vw;
 }
 
 .card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   margin: 1rem 0;
   padding: 1rem;
   border: 1px solid #a6a6a6;
@@ -18,16 +20,8 @@
     rgb(0 0 0 / 9%) 0px -3px 5px;
 }
 
-.features-list {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 1rem;
-  grid-auto-rows: 1fr;
-}
-
 .features-container {
   margin: 1rem 0;
-  /* padding: 1rem; */
   border: 1px solid #a6a6a6;
   border-radius: 10px;
   background-color: white;
@@ -35,7 +29,7 @@
     rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px,
     rgb(0 0 0 / 9%) 0px -3px 5px;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 100%;
 }
 
 .features-container img {
@@ -53,6 +47,7 @@
 .contacts-container {
   text-align: center;
   max-width: fit-content;
+  font-size: 0.8rem;
 }
 
 .contacts-line {
@@ -64,4 +59,48 @@
   font-weight: bold;
   color: rgb(103, 187, 255);
   text-align: initial;
+}
+
+@media (min-width: 55rem) {
+  .container {
+    max-width: 80vw;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #a6a6a6;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px,
+      rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px,
+      rgb(0 0 0 / 9%) 0px -3px 5px;
+  }
+
+  .features-list {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 1rem;
+    grid-auto-rows: 1fr;
+  }
+
+  .features-container {
+    margin: 1rem 0;
+    border: 1px solid #a6a6a6;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px,
+      rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px,
+      rgb(0 0 0 / 9%) 0px -3px 5px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .contacts-container {
+    text-align: center;
+    max-width: fit-content;
+  }
 }

@@ -13,6 +13,7 @@ const OrderItem = (props) => {
           {props.order.products.map((product) => {
             return (
               <ProductItem
+                key={product.id}
                 product={product}
                 shouldRenderActions={false}
               ></ProductItem>
@@ -25,7 +26,7 @@ const OrderItem = (props) => {
         <hr></hr>
         <div className={classes["payment-area-line"]}>
           <p>Order Summary: </p>
-          <p>$ {props.order.totalPrice}</p>
+          <p>$ {props.order.totalPrice.toFixed(2)}</p>
         </div>
         <div className={classes["payment-area-line"]}>
           <p>Delivery Price: </p>

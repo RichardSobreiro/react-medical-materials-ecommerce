@@ -2,15 +2,17 @@
 .container {
   background-color: #cbcbcb;
   border-radius: 10px;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
   padding: 1rem;
   margin-bottom: 1rem;
 }
 
 .order-area {
   padding: 1rem;
+  width: 100%;
 }
 
 .order-area hr {
@@ -19,15 +21,16 @@
 }
 
 .order-area-title {
-  text-align: left;
+  text-align: center;
 }
 
 .payment-area {
   padding: 1rem;
+  width: 100%;
 }
 
 .payment-area-title {
-  text-align: right;
+  text-align: center;
 }
 
 .payment-area hr {
@@ -44,4 +47,40 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 55rem) {
+  .container {
+    background-color: #cbcbcb;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    width: 80%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .order-area {
+    padding: 1rem;
+  }
+
+  .payment-area {
+    padding: 1rem;
+  }
+
+  .payment-area-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  .order-area-title {
+    text-align: left;
+  }
+
+  .payment-area-title {
+    text-align: right;
+  }
 }

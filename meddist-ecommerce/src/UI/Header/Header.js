@@ -19,6 +19,7 @@ const Header = (props) => {
   const cart = useSelector((state) => state.cart);
   const [modalState, setModalState] = useState(false);
   const navigate = useNavigate();
+  const [mobileHeaderChecked, setMobileHeaderChecked] = useState(false);
 
   const showModal = () => {
     setModalState(true);
@@ -99,7 +100,90 @@ const Header = (props) => {
             </div>
           </div>
         </div>
-        <div className={classes["container-fluid"]}>
+        <div
+          style={mobileHeaderChecked ? { paddingBottom: "1rem" } : null}
+          className={classes["container-fluid"]}
+        >
+          <nav className={classes["mobile-header"]}>
+            <div className={classes["mobile-header-logo"]}>
+              <NavLink to="/" className={classes["navbar-brand"]} end>
+                <img src={logo} alt="Company logo"></img>
+                <span>MedDist</span>
+              </NavLink>
+            </div>
+            <div className={classes["mobile-nav-button"]}>
+              <input
+                className={classes["mobile-header-menu-btn"]}
+                type="checkbox"
+                checked={mobileHeaderChecked}
+                onChange={() => {
+                  setMobileHeaderChecked((prevState) => {
+                    return !prevState;
+                  });
+                }}
+                id="mobile-header-menu-btn"
+              />
+              <label
+                className={classes["mobile-header-menu-icon"]}
+                htmlFor="mobile-header-menu-btn"
+              >
+                <span className={classes["mobile-header-navicon"]}></span>
+              </label>
+              <button
+                type="button"
+                aria-label="Shopping cart"
+                className={classes["shopping-cart"]}
+                onClick={showModal}
+              >
+                <span>({getTotalQuantity() || 0})</span>
+                <img
+                  src={shoppingcartcompressed}
+                  alt="Shopping cart icon"
+                ></img>
+              </button>
+              <ul className={classes["mobile-header-menu"]}>
+                <li>
+                  <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                      `${classes["navbar-nav-link"]} ${
+                        isActive ? classes.active : ""
+                      }`
+                    }
+                    end
+                  >
+                    Home
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/orders"
+                    className={({ isActive }) =>
+                      `${classes["navbar-nav-link"]} ${
+                        isActive ? classes.active : ""
+                      }`
+                    }
+                    end
+                  >
+                    Orders
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/about"
+                    className={({ isActive }) =>
+                      `${classes["navbar-nav-link"]} ${
+                        isActive ? classes.active : ""
+                      }`
+                    }
+                    end
+                  >
+                    About
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+          </nav>
           <nav className={classes.navbar}>
             <div className={classes["navbar-logo-menu-container"]}>
               <NavLink to="/" className={classes["navbar-brand"]} end>

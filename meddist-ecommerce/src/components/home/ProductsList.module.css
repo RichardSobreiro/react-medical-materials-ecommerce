@@ -2,9 +2,15 @@
 
 .products-list-container {
   margin: 2rem;
-  width: 90vw;
+  width: 100vw;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+@media (min-width: 55rem) {
+  .products-list-container {
+    width: 90vw;
+  }
 }

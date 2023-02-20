@@ -8,5 +8,6 @@
 @media (min-width: 55rem) {
   .product-detail-container {
     padding: 4rem 0rem;
+    max-width: 50rem;
   }
 }
